@@ -17,14 +17,18 @@ public class Game {
   private Long id;
   private String title;
 
-  @Column(name = "game_year") //customiza o nome do campo no banco de dados, pois year é uma palavra reservada
+  @Column(name = "game_year") // customiza o nome do campo no banco de dados, pois year é uma palavra
+                              // reservada
                               // no SQL
   private Integer year;
   private String genre;
   private String platforms;
   private Double score;
   private String imgUrl;
+  @Column(columnDefinition = "TEXT") // Aumenta o numero de caracteres aceitos no campo do banco de dados, pois o
+                                     // padrão seria somente 255 caracteres.
   private String shortDescription;
+  @Column(columnDefinition = "TEXT")
   private String longDescription;
 
   public Game() {
